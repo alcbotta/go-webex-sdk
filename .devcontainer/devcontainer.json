@@ -1,21 +1,18 @@
 {
   "name": "Go",
   "dockerFile": "Dockerfile",
-
+  "workspaceFolder": "/go/github.com/go-webex-sdk/webexsdk",
   // Specifies a list of ports the container should publish
   //   "appPort": [9000],
-
   "runArgs": [
     // Uncomment the next line to run as root instead. Linux users,
     // update Dockerfile with your user's UID/GID if not 1000 when
     // using the default "vscode" user.
     // "-u", "root",
-
     "--cap-add=SYS_PTRACE",
     "--security-opt",
     "seccomp=unconfined"
   ],
-
   // Use 'settings' to set *default* container specific settings.json values on container create.
   // You can edit these settings after create using File > Preferences > Settings > Remote.
   "settings": {
@@ -24,9 +21,10 @@
     "go.inferGopath": true,
     "go.useLanguageServer": true
   },
-
   // Uncomment the next line to run commands after the container is created.
   // "postCreateCommand": "go version",
-
-  "extensions": ["ms-vscode.go"]
+  "extensions": [
+    "ms-vscode.go",
+    "windmilleng.vscode-go-autotest"
+  ]
 }

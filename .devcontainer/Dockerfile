@@ -61,5 +61,7 @@ RUN go get -x -d github.com/stamblerre/gocode 2>&1 \
     github.com/mgechev/revive \
     github.com/derekparker/delve/cmd/dlv 2>&1
 
+ENV DEBIAN_FRONTEND=
+
 # Uncomment the line below if you are using go modules
 ENV GO111MODULE=on
